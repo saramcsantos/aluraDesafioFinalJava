@@ -42,7 +42,7 @@ public class ContaCorrente {
                 case 3:
                     System.out.println("Digite o valor a ser transferido desta conta para outra conta:");
                     double transfereValor = entrarComDados.nextDouble();
-                    if (transfereValor < saldoInicialDoCliente){
+                    if (transfereValor <= saldoInicialDoCliente){
                         saldoInicialDoCliente -= transfereValor;
                         System.out.println(String.format("Saldo disponível: R$ %.2f", saldoInicialDoCliente));
                     }else{
