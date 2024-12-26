@@ -27,7 +27,13 @@ public class ContaCorrente {
                 4 - Sair
                 """;
             System.out.println(menuDeOperacoes);
-            opcao = entrarComDados.nextInt();
+            if (entrarComDados.hasNextInt()){
+                opcao = entrarComDados.nextInt();
+            }else{
+                System.out.println("Por favor insira uma das opções do menu: ");
+                entrarComDados.next();
+                opcao = entrarComDados.nextInt();
+            }
 
             switch (opcao){
                 case 1:
