@@ -37,6 +37,7 @@ public class ContaCorrente {
                     System.out.println("Digite o valor a ser enviado para está conta:");
                     double recebeValor = entrarComDados.nextDouble();
                     saldoInicialDoCliente += recebeValor;
+                     System.out.println("Operação realizada com sucesso!");
                     System.out.println(String.format("Saldo disponível: R$ %.2f", saldoInicialDoCliente));
                     break;
                 case 3:
@@ -44,6 +45,7 @@ public class ContaCorrente {
                     double transfereValor = entrarComDados.nextDouble();
                     if (transfereValor <= saldoInicialDoCliente){
                         saldoInicialDoCliente -= transfereValor;
+                         System.out.println("Operação realizada com sucesso!");
                         System.out.println(String.format("Saldo disponível: R$ %.2f", saldoInicialDoCliente));
                     }else{
                         System.out.println("Saldo insuficiente para fazer a transferência");
